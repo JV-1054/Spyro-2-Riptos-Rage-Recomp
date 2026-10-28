@@ -16,6 +16,12 @@ cmake -S . -B build-spyro-2 -G Ninja -DCMAKE_BUILD_TYPE=Release -DPSX_REWIND=OFF
 cmake --build build-spyro-2 --target psx-runtime --parallel 12
 ```
 
+## Controller support
+
+Player 1 defaults to the first connected game controller. Connect a controller
+before launching the game; controller button mappings can be edited in
+`input.ini` beside the executable. The PlayStation pad defaults to digital mode.
+
 The project config points to `isos/Spyro 2 - Ripto's Rage! (USA).cue`, which
 references its BIN in the same directory. Disc files are local inputs and are
 not included in this repository.
