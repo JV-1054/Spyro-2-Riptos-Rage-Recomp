@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Spyro 2: Ripto's Rage!",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "Spyro 2 Ripto's Rage Recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SCUS-94425"
+  }
+}

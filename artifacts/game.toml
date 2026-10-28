@@ -1,0 +1,54 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Spyro 2: Ripto's Rage!"
+id = "SCUS-94425"
+players = 1
+exe = "disc/SCUS_944.25"
+disc = "isos/Spyro 2 - Ripto's Rage! (USA).cue"
+load_address = "0x80010000"
+entry_pc = "0x8005478C"
+text_size = "0x00057000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Spyro 2 - Ripto's Rage! (USA).bin"
+cue_name = "Spyro 2 - Ripto's Rage! (USA).cue"
+boot_exe = "SCUS_944.25"
+known_sizes = [565371408]
+known_md5 = [
+  "9771d273c498e29aa9543c30ec00aa35",
+]
+known_sha1 = [
+  "b3a28f8c5ec02dfbd1f9bd47adbe1d75186a5d3f",
+]
+known_crc32 = [
+  "bc8734f8",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "Spyro 2: Ripto's Rage! Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "114d3c7919b59290b573c438b8f21f54b7cf079d035c5faa2d1cd2ccdd765d84"
